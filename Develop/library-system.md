@@ -1,6 +1,43 @@
 # [TIL] 도서관 시스템 구현으로 배우는 Python 예외 처리와 OOP
 
-## 1. 도서관 시스템 구현에 사용된 Python 내장 예외문
+# 1. Python CLI 도서관 관리 시스템 구현 
+> 기능 요구사항을 보며 도서관 관리 시스템 구현 중 마주한 문제들과 새롭게 알게된 내용
+
+### CSV 도서 데이터 출력 문제
+>내가 원했던 내용은 CSV 파일로부터 도서 데이터가 넘어왔을 때 제목, 저자, isbn 데이터가 모두 출력이 되길 바랬는데,
+>
+>'도서 등록 완료: title' 만 출력 되었다.
+<img width="992" height="302" alt="Image" src="https://github.com/user-attachments/assets/adcd12e9-3373-49ba-96e8-04d6d41e8f75" />
+<img width="1042" height="160" alt="Image" src="https://github.com/user-attachments/assets/5c286730-477c-4da3-a4e4-859e1b4f179c" />
+<img width="1110" height="514" alt="Image" src="https://github.com/user-attachments/assets/cb341045-0121-40db-93c1-48a38aabd597" />
+
+- 원인 : 이미지와 같이 lib.add_book() 으로 해놔서 add_book 메서드 안에 있는 print가 출력 되었다. 2번 도서 목록 조회를 눌러 보았을 때는 데이터가 모두 잘 넘어오는 것을 확인했다.
+
+<img width="1042" height="270" alt="Image" src="https://github.com/user-attachments/assets/23c9d41c-2375-4a97-b1f7-27a5fbba3f98" />
+- 해결 과정 : 이미지와 같이 new_book을 Book의 인스턴스로 하여금 생성한 뒤 도서를 추가하였을 때, Book 클래스에 있는 __str__ 함수가 자동으로 할당되어 출력 되었습니다.
+<img width="1160" height="676" alt="Image" src="https://github.com/user-attachments/assets/54db2356-f202-4331-9a79-4dc4707fd931" />
+
+
+
+### 회원 등록
+> 회원 등록 시 처음에 이름 전화번호 입력을 받는데 그 회원이 책을 빌렸는지 여부에 대한 리스트도 클래스 내부에 만들어야 하는지에 대한 의견이 나왔습니다.
+
+- 제 생각
+> 회원 등록 시에는 처음이기에 당연히 빌린 책이 없을거라고 가정, 따라서 add_member 함수 파라미터에는 이름과, 전화번호만 두고 내부 함수에 책을 빌렸는지에 대한 여부 변수를 빈 리스트로 정의해 주었습니다.
+
+---
+
+### 예외 처리
+> input 값을 입력해야 하는 부분이 많았는데 간과한 사실이 하나 있었다. 바로 "공백"이었다.
+>
+> 많은 입력값들을 모두 공백을 제거하기에는 하나하나 다 strip()을 사용해야 하기에 번거로움이 있었다.
+>
+> 스스로 생각해본 결과 get_input()이라는 함수를 만들어 이 함수 안에 .strip()을 내장시켜 input() 대신 get_input()을 사용하여 번거로움을 줄였다.
+<img width="503" height="126" alt="Image" src="https://github.com/user-attachments/assets/e688b442-4ad2-4aa6-ac75-c4cbd6db06f2" />
+
+
+ 
+##  도서관 시스템 구현에 사용된 Python 내장 예외문
 
 데이터가 서비스에서 허용하는 형식에 맞는지, 논리적으로 타당한지 확인하는 과정에서 다음과 같은 예외들을 사용합니다.
 
@@ -15,7 +52,7 @@
 
 ---
 
-## 2. 객체 지향 프로그래밍 (OOP)
+# 2. 객체 지향 프로그래밍 (OOP)
 프로그램을 데이터와 행위를 하나의 집합으로 모아 관리하는 방식입니다.
 
 ### 🔹 객체 (Object / Instance)
