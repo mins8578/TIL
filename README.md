@@ -1,8 +1,9 @@
 # 📚 TIL (Today I Learned)
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=D2Coding&size=30&pause=1000&color=FF0606&background=F0F3F9&width=435&lines=Let's+write+today's+TIL!)](https://git.io/typing-svg)
-
 <br>
+
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=30&pause=1000&color=C415F7&width=435&lines=Let's+write+TIL+!!!)](https://git.io/typing-svg)
+
 <br>
 
 > [!IMPORTANT]
