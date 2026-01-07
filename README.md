@@ -16,9 +16,9 @@
 | Category | Description |
 | :--- | :--- |
 | [Python](./Python) | 파이썬 문법 및 라이브러리 활용 |
-| [Web](./Web) | 웹 그 자체 |
-| [Infra](./Infra) | 인프라(AWS, Docker, kubernetes |
-| [Git](./Git) | 버전 관리 및 협업 툴 사용법 |
+| [Web](./Web) (예정) | 웹 그 자체 |
+| [Infra](./Infra) (예정) | 인프라(AWS, Docker, kubernetes |
+| [Git](./Git) (예정) | 버전 관리 및 협업 툴 사용법 |
 
 <br>
 
